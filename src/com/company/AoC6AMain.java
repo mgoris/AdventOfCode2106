@@ -16,7 +16,7 @@ public class AoC6AMain {
     public static void main(String[] args) throws UnsupportedEncodingException, NoSuchAlgorithmException {
         boolean isFirstPuzzle = false;
 
-        String filename = "D:\\Personal Data\\mgoris\\Desktop\\AoC2016\\6a.txt";
+        String filename = "src/com/company/resources/6a.txt";
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 
