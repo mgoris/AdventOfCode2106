@@ -33,6 +33,8 @@ public class AoC6AMain {
         String[] fourthLetters = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
         String[] fifthLetters = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
         String[] sixthLetters = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+        String[] seventhLetters = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+        String[] eighthLetters = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
         int firstMaxNumber = 0;
         char firstMaxCharacter = '-';
         int secondMaxNumber = 0;
@@ -45,7 +47,12 @@ public class AoC6AMain {
         char fifthMaxCharacter = '-';
         int sixthMaxNumber = 0;
         char sixthMaxCharacter = '-';
+        int seventhMaxNumber = 0;
+        char seventhMaxCharacter = '-';
+        int eighthMaxNumber = 0;
+        char eighthMaxCharacter = '-';
         int totalChars = 0;
+
 
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
@@ -105,6 +112,24 @@ public class AoC6AMain {
 
                         }
                         break;
+                    case 6:
+                        seventhLetters[alphabet.indexOf(line.charAt(i))] += line.charAt(i);
+                        totalChars += 1;
+                        if (seventhMaxNumber <= seventhLetters[alphabet.indexOf(line.charAt(i))].length()) {
+                            seventhMaxNumber = seventhLetters[alphabet.indexOf(line.charAt(i))].length();
+                            seventhMaxCharacter = line.charAt(i);
+
+                        }
+                        break;
+                    case 7:
+                        eighthLetters[alphabet.indexOf(line.charAt(i))] += line.charAt(i);
+                        totalChars += 1;
+                        if (eighthMaxNumber <= eighthLetters[alphabet.indexOf(line.charAt(i))].length()) {
+                            eighthMaxNumber = eighthLetters[alphabet.indexOf(line.charAt(i))].length();
+                            eighthMaxCharacter = line.charAt(i);
+
+                        }
+                        break;
                 }
             }
         }
@@ -115,6 +140,8 @@ public class AoC6AMain {
             System.out.print(fourthLetters[k].length() + fourthLetters[k] + " ");
             System.out.print(fifthLetters[k].length() + fifthLetters[k] + " ");
             System.out.print(sixthLetters[k].length() + sixthLetters[k] + " ");
+            System.out.print(seventhLetters[k].length() + seventhLetters[k] + " ");
+            System.out.print(eighthLetters[k].length() + eighthLetters[k] + " ");
             System.out.println("");
         }
         System.out.println("   " + firstMaxCharacter);
@@ -123,6 +150,8 @@ public class AoC6AMain {
         System.out.println("   " + fourthMaxCharacter);
         System.out.println("   " + fifthMaxCharacter);
         System.out.println("   " + sixthMaxCharacter);
+        System.out.println("   " + seventhMaxCharacter);
+        System.out.println("   " + eighthMaxCharacter);
         System.out.println("  total chars: " + totalChars);
     }
 }
