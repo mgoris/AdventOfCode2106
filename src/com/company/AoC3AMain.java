@@ -53,7 +53,8 @@ public class AoC3AMain {
                     loopCounter = 0;
                     break;
                 }
-                    default: break;
+                default:
+                    break;
             }
         }
         inputTriples = inputTriplesTransposed;
